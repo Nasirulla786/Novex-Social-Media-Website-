@@ -15,7 +15,7 @@ import Loop from "./pages/Loop.jsx";
 import StoryPage from "./pages/StoryPage.jsx";
 import Search from "./pages/Search.jsx";
 
-export const ServelURL = "http://localhost:8000";
+export const ServelURL = import.meta.env.VITE_ENVIROMENT=="production"?import.meta.env.VITE_API_URL_PRO : import.meta.env.VITE_API_URL
 
 // ✅ Protected Route Component
 const ProtectedRoute = ({ children }) => {
